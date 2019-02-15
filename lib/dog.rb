@@ -9,9 +9,7 @@ class Dog
   end
   
   def save
-    sql = <<-SQL
-    INSERT INTO dogs (name, breed)
-    SQL
+    DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?)", self.name, self.breed)
     dog
   end
   
