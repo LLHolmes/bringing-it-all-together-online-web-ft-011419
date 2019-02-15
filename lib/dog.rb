@@ -49,7 +49,7 @@ class Dog
     if dog_info.empty?
       dog = Dog.create(name: name, breed: breed)
     else
-      dog = Dog.new_from_db(dog_info)
+      dog = Dog.new_from_db(dog_info[0])
     end
     dog
   end
