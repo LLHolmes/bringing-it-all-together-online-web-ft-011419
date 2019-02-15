@@ -48,6 +48,8 @@ class Dog
     dog_info = DB[:conn].execute(sql, name, breed)
     if dog_info.empty?
       dog = Dog.create(name: name, breed: breed)
+    else
+      dog = Dog.find_by_name(name)
   end
   
   def self.create_table
