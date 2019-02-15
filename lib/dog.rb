@@ -9,6 +9,10 @@ class Dog
   end
   
   def save
+    sql = <<-SQL
+    INSERT INTO dogs
+    SQL
+    dog
   end
   
   def update
