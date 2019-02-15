@@ -13,7 +13,7 @@ class Dog
       self.update
     else
       DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?)", self.name, self.breed)
-      @id = DB[:conn].execute("SELECT last_inserted_rowid FROM dogs")
+      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")
     end
     dog
   end
