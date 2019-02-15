@@ -49,7 +49,7 @@ class Dog
     if dog_info.empty?
       dog = Dog.create(name: name, breed: breed)
     else
-      dog = Dog.find_by_id(dog_info[0])
+      dog = Dog.find_by_id(dog_info[0][0])
   end
   
   def self.create_table
