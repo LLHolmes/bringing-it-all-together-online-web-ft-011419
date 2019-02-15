@@ -22,7 +22,8 @@ class Dog
   def update
   end
   
-  def self.create(row)
+  def self.create(name:, breed:, id: nil)
+    dog = Dog.new(name: name, breed: breed)
   end
   
   def self.new_from_db(row)
