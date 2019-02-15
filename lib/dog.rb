@@ -51,6 +51,7 @@ class Dog
     else
       dog = Dog.new_from_db(dog_info)
     end
+    dog
   end
   
   def self.create_table
