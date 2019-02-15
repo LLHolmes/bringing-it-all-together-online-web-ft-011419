@@ -20,6 +20,10 @@ class Dog
   end
   
   def update
+    sql = <<-SQL
+    UPDATE
+    SQL
+    DB[:conn].execute("UPDATE ")
   end
   
   def self.create(name:, breed:, id: nil)
