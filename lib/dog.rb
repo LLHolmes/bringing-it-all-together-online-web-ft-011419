@@ -30,6 +30,7 @@ class Dog
   #   sql = "SELECT * FROM songs WHERE name = ?"
   # result = DB[:conn].execute(sql, name)[0]
   # Song.new(result[1], result[2], result[0])
+    dog
   end
   
   def self.find_or_create_by(name)
